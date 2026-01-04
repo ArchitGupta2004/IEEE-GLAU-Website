@@ -1,0 +1,206 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.team-page {
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  color: #ffffff;
+  background: radial-gradient(
+      circle at top left,
+      rgba(56, 189, 248, 0.18),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #0b0220, #1a0b3d, #2b0a55);
+}
+
+/* ===== HERO ===== */
+.team-hero {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.team-hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.team-hero h1 span {
+  color: #38bdf8;
+}
+
+.team-hero p {
+  margin-top: 10px;
+  color: #c7d2fe;
+  font-size: 15px;
+}
+
+/* ===== SECTIONS ===== */
+.team-section {
+  margin-bottom: 80px;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #cbd5f5;
+  margin-bottom: 40px;
+}
+
+/* ===== FACULTY CARDS ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.team-card {
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  transition: 0.4s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card.purple {
+  background: linear-gradient(135deg, #6d28d9, #7c3aed);
+}
+
+.team-card.teal {
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+}
+
+/* ===== AVATAR ===== */
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  background: white;
+  color: #4c1d95;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ===== TEXT ===== */
+.team-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e7ff;
+}
+
+.sub {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.contact {
+  font-size: 13px;
+  color: #f1f5f9;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.actions button {
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background: white;
+  color: #4c1d95;
+}
+
+/* ===== STUDENT LEADERSHIP ===== */
+.leader-card {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  background: linear-gradient(135deg, #1d4ed8, #6366f1);
+  border-radius: 26px;
+  padding: 32px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+.leader-avatar {
+  min-width: 140px;
+  height: 140px;
+  border-radius: 22px;
+  background: white;
+  color: #1e3a8a;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-info h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.leader-info .role {
+  font-size: 15px;
+}
+
+.leader-info .sub {
+  font-size: 13px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin: 12px 0 18px;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .team-page {
+    padding: 100px 20px 60px;
+  }
+
+  .leader-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-avatar {
+    margin: auto;
+  }
+}

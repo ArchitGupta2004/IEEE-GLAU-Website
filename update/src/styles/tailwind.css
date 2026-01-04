@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= GLOBAL BASE ================= */
+@layer base {
+  body {
+    @apply bg-[#020617] text-white antialiased;
+  }
+}
+
+/* ================= COMPONENTS ================= */
+@layer components {
+
+  /* HERO */
+  .hero {
+    @apply relative min-h-screen overflow-hidden flex items-center;
+    background: radial-gradient(
+      ellipse at right,
+      #5b21b6 0%,
+      #1e3a8a 35%,
+      #020617 70%
+    );
+  }
+
+  .hero-title {
+    @apply text-6xl md:text-7xl font-extrabold leading-tight;
+  }
+
+  .hero-subtitle {
+    @apply mt-6 text-gray-300 max-w-xl;
+  }
+
+  .glow-btn {
+    @apply px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold
+           hover:shadow-[0_0_40px_rgba(34,211,238,0.7)]
+           transition;
+  }
+
+  /* DOT + LINE */
+  .about-dot {
+    @apply absolute w-1 h-1 rounded-full bg-cyan-300/60;
+  }
+
+  .about-line {
+    @apply absolute h-px w-32 bg-gradient-to-r
+           from-transparent via-cyan-400/40 to-transparent;
+  }
+}
+
+
+
+
+
+
+/*==============================================================================                          Footer 
+==========================================================*/
+
+
+
+
+
+
