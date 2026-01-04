@@ -1,0 +1,41 @@
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .footer {
+    @apply relative mt-32 px-10 pt-20 pb-10;
+    background:
+      radial-gradient(800px at 10% 20%, rgba(56,189,248,0.12), transparent 40%),
+      radial-gradient(900px at 90% 80%, rgba(168,85,247,0.18), transparent 45%),
+      linear-gradient(180deg, #050d1a 0%, #071a2e 40%, #0b1c3a 100%);
+  }
+
+  .footer-card {
+    @apply max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12;
+  }
+
+  .footer-title {
+    @apply text-sky-400 font-semibold mb-4;
+  }
+
+  .footer-link {
+    @apply text-gray-400 hover:text-sky-400 transition block mb-2;
+  }
+
+  .footer-desc {
+    @apply text-gray-400 leading-relaxed mt-4;
+  }
+
+  .social-icon {
+    @apply w-9 h-9 flex items-center justify-center
+           rounded-lg bg-white/5 border border-white/10
+           hover:bg-sky-400 hover:text-black transition;
+  }
+
+  .footer-bottom {
+    @apply max-w-7xl mx-auto mt-16
+           flex flex-col md:flex-row items-center
+           justify-between gap-6
+           px-6 py-6 rounded-xl
+           bg-white/5 border border-white/10 backdrop-blur;
+  }
+}
