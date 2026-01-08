@@ -1,18 +1,14 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ================= GLOBAL BASE ================= */
-@layer base {
-  body {
-    @apply bg-[#020617] text-white antialiased;
-  }
-}
 
-/* ================= COMPONENTS ================= */
+
+
+
 @layer components {
 
-  /* HERO */
   .hero {
     @apply relative min-h-screen overflow-hidden flex items-center;
     background: radial-gradient(
@@ -22,7 +18,7 @@
       #020617 70%
     );
   }
-
+/* isko hata ke bhi*/
   .hero-title {
     @apply text-6xl md:text-7xl font-extrabold leading-tight;
   }
@@ -37,7 +33,7 @@
            transition;
   }
 
-  /* DOT + LINE */
+
   .about-dot {
     @apply absolute w-1 h-1 rounded-full bg-cyan-300/60;
   }

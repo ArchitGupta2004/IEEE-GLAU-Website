@@ -1,98 +1,132 @@
-@tailwind components;
-@tailwind utilities;
 
-/* ================= ABOUT PAGE (TAILWIND ONLY) ================= */
-@layer components {
-
-  /* HERO */
-  .about-hero {
-    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
-  }
-
-  .about-content {
-    @apply relative z-20 max-w-5xl px-6 text-center;
-  }
-
-  /* FLOATING VIDEO CARDS */
-  .about-float {
-    @apply absolute rounded-2xl
-           bg-white/5 border border-white/10
-           backdrop-blur shadow-2xl;
-    animation: aboutFloat 22s ease-in-out infinite;
-  }
-
-  .about-depth-1 {
-    animation-duration: 18s;
-    @apply opacity-90;
-  }
-
-  .about-depth-2 {
-    animation-duration: 24s;
-    @apply opacity-75;
-  }
-
-  .about-depth-3 {
-    animation-duration: 30s;
-    @apply opacity-60;
-  }
-
-  /* DOT + LINE NETWORK */
-  .about-pattern {
-    @apply absolute inset-0 pointer-events-none z-0;
-    animation: aboutDrift 120s linear infinite;
-  }
-
-  .about-dot {
-    @apply absolute w-1.5 h-1.5 rounded-full bg-cyan-300/80;
-  }
-
-  .about-line {
-    @apply absolute h-px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      rgba(56,189,248,0.6),
-      transparent
-    );
-  }
-
-  /* GLASS CARDS (MISSION / VISION) */
-  .about-glass {
-    @apply bg-white/5 border border-white/10
-           rounded-2xl p-10 backdrop-blur
-           transition-all duration-500;
-  }
-
-  .about-glass:hover {
-    @apply -translate-y-2;
-    border-color: rgba(56,189,248,0.4);
-  }
-
-  /* VALUE CARDS */
-  .about-value {
-    @apply bg-white/5 border border-white/10
-           rounded-xl px-8 py-6 text-center
-           backdrop-blur transition-all duration-500;
-  }
-
-  .about-value:hover {
-    @apply -translate-y-1 scale-[1.03];
-  }
+.about-section {
+  background:
+      radial-gradient(900px at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+      radial-gradient(900px at 80% 70%, rgba(168,85,247,0.18), transparent 45%),
+      linear-gradient(180deg, #050d1a 0%, #071a2e 40%, #0b1c3a 100%);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 20px;
 }
 
-/* ================= VIDEO-LIKE ANIMATIONS ================= */
-
-/* Slow cinematic floating (video feel) */
-@keyframes aboutFloat {
-  0%   { transform: translate(0,0); }
-  25%  { transform: translate(10px,-20px); }
-  50%  { transform: translate(0,0); }
-  75%  { transform: translate(-10px,16px); }
-  100% { transform: translate(0,0); }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Background network drift */
-@keyframes aboutDrift {
-  from { transform: translate(0,0); }
-  to   { transform: translate(-300px,-200px); }
+.about-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0 50px;
+  color: #b0b0d0;
+}
+
+/* ===== Mission & Vision ===== */
+.about-main {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-mission,
+.about-vision {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  flex: 1 1 400px;
+}
+
+.about-mission h2,
+.about-vision h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #80dfff;
+}
+
+.about-vision h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #ffb366;
+}
+
+.about-vision ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.about-vision ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-vision ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #80ffea;
+}
+
+/* ===== Button ===== */
+.btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #80ffea;
+  color: #1f1c3b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00d1b2;
+}
+
+/* ===== Core Values ===== */
+.core-values {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.values-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  min-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ff80bf;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #d0d0ff;
+}
+
+.card:hover {
+  background: rgba(128, 255, 234, 0.1);
+  transform: translateY(-5px);
 }

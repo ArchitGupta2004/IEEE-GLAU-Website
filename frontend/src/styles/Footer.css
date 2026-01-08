@@ -1,6 +1,5 @@
-@tailwind components;
-@tailwind utilities;
-@layer components {
+
+
   .footer {
     @apply relative mt-32 px-10 pt-20 pb-10;
     background:
@@ -33,9 +32,8 @@
 
   .footer-bottom {
     @apply max-w-7xl mx-auto mt-16
-           flex flex-col md:flex-row items-center
+           flex flex-col md:flex-row items-end
            justify-between gap-6
-           px-6 py-6 rounded-xl
-           bg-white/5 border border-white/10 backdrop-blur;
+           /* px-6 py-6 rounded-xl */
+           /* bg-white/5 border border-white/10 backdrop-blur; */
   }
-}

@@ -1,117 +1,100 @@
-import Navbar from "../components/Navbar";
+/*import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/About.css";
-export default function About() {
+
+const About = () => {
   return (
     <>
       <Navbar />
 
-      {/* ================= ABOUT HERO ================= */}
-      <section className="hero">
-
-        {/* DOT + LINE BACKGROUND */}
-        <div className="pattern">
-          <span className="dot top-[16%] left-[20%]" />
-          <span className="dot top-[30%] right-[24%]" />
-          <span className="dot bottom-[28%] left-[42%]" />
-
-          <span className="line w-[220px] top-[18%] left-[20%] rotate-[10deg]" />
-          <span className="line w-[200px] bottom-[30%] right-[28%] -rotate-[14deg]" />
-        </div>
-
-        {/* FLOATING INFO CARDS (VIDEO FEEL) */}
-        <div className="float-card w-56 left-[6%] top-[30%] p-5">
-          <h4 className="font-semibold text-cyan-400">Founded</h4>
-          <p className="text-sm text-gray-300 mt-1">IEEE GLAU Student Branch</p>
-        </div>
-
-        <div className="float-card w-60 right-[8%] top-[34%] p-5 [animation-delay:2s]">
-          <h4 className="font-semibold text-purple-400">Community</h4>
-          <p className="text-sm text-gray-300 mt-1">Innovators & Leaders</p>
-        </div>
-
-        <div className="float-card w-56 left-[12%] bottom-[26%] p-5 [animation-delay:4s]">
-          <h4 className="font-semibold text-cyan-400">Focus</h4>
-          <p className="text-sm text-gray-300 mt-1">Technology & Research</p>
-        </div>
-
-        {/* HERO CONTENT */}
-        <div className="hero-content">
-
-          <div className="hero-badge mx-auto">
-            ✦ About IEEE GLAU
-          </div>
-
-          <h1 className="hero-title">
-            Building a <span className="gradient-text">Future</span><br />
-            Through Technology
-          </h1>
-
-          <p className="hero-desc">
-            IEEE GLA University Student Branch is a dynamic technical
-            community dedicated to innovation, learning, leadership,
-            and real-world impact.
+      <section className="about-section">
+        <div className="container">
+          <h1 className="about-title">About IEEE GLAU</h1>
+          <p className="about-subtitle">
+            Empowering students to excel in technology and leadership
           </p>
 
-        </div>
-      </section>
-
-      {/* ================= MISSION / VISION ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-14">
-
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-10 backdrop-blur
-                        hover:border-cyan-400/40 transition">
-          <h2 className="text-2xl font-bold text-cyan-400 mb-4">
-            Our Mission
-          </h2>
-          <p className="text-gray-300 leading-relaxed">
-            To empower students with technical knowledge, leadership
-            skills, and innovation opportunities that prepare them
-            for global challenges.
-          </p>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-10 backdrop-blur
-                        hover:border-purple-400/40 transition">
-          <h2 className="text-2xl font-bold text-purple-400 mb-4">
-            Our Vision
-          </h2>
-          <p className="text-gray-300 leading-relaxed">
-            To be a leading student chapter that fosters excellence,
-            ethical innovation, and impactful research.
-          </p>
-        </div>
-
-      </section>
-
-      {/* ================= CORE VALUES ================= */}
-      <section className="max-w-7xl mx-auto px-6 pb-36">
-
-        <h2 className="text-3xl font-bold text-center mb-16">
-          Our <span className="gradient-text">Core Values</span>
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-8">
-
-          {[
-            { title: "Innovation", desc: "Creative thinking & problem solving" },
-            { title: "Excellence", desc: "Continuous improvement mindset" },
-            { title: "Collaboration", desc: "Strong teamwork culture" },
-            { title: "Integrity", desc: "Ethical & responsible actions" }
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="stat-card hover:scale-[1.03] transition-transform"
-            >
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.desc}</p>
+          <div className="about-main">
+           
+            <div className="about-mission">
+              <h2>Our Mission</h2>
+              <p>
+                IEEE GLAU Student Branch is dedicated to advancing technology for
+                the benefit of humanity. We provide a platform for students to
+                explore, innovate, and collaborate on cutting-edge projects that
+                shape the future of engineering and technology.
+              </p>
+              <p>
+                Through technical workshops, competitive events, research
+                initiatives, and industry interactions, we nurture the next
+                generation of innovators and leaders. Our community thrives on
+                curiosity, collaboration, and the pursuit of excellence.
+              </p>
+              <button className="btn">Get Involved</button>
             </div>
-          ))}
 
+       
+            <div className="about-vision">
+              <h2>Our Vision</h2>
+              <p>
+                To be the premier hub for technological innovation and
+                professional development at GLA University, inspiring students
+                to make meaningful contributions to society through engineering
+                excellence.
+              </p>
+
+              <h3>What We Do</h3>
+              <ul>
+                <li>Organize technical workshops and seminars</li>
+                <li>Conduct hackathons and competitions</li>
+                <li>Facilitate industry mentorship programs</li>
+                <li>Support research and innovation projects</li>
+              </ul>
+            </div>
+          </div>
+          <div className="core-values">
+            <h2>Our Core Values</h2>
+
+            <div className="values-cards">
+              <div className="card">
+                <h3>Innovation</h3>
+                <p>
+                  Driving cutting-edge technological advancements and fostering
+                  creative problem-solving.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3>Learning</h3>
+                <p>
+                  Continuous skill development through workshops, seminars, and
+                  hands-on projects.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3>Community</h3>
+                <p>
+                  Building a supportive network of passionate engineers and
+                  technology enthusiasts.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3>Excellence</h3>
+                <p>
+                  Striving for the highest standards in all technical and
+                  professional endeavors.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <Footer />
     </>
   );
-}
+};
+
+export default About;*/

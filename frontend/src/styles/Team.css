@@ -1,0 +1,111 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+     .team-page {
+    @apply text-white;
+    background:
+      radial-gradient(900px at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+      radial-gradient(900px at 80% 70%, rgba(168,85,247,0.18), transparent 45%),
+      linear-gradient(180deg, #050d1a 0%, #071a2e 40%, #0b1c3a 100%);
+  }
+
+
+  /* PAGE */
+  .team-page {
+    @apply relative min-h-screen pt-32 pb-24 px-6 text-white bg-black overflow-hidden;
+  }
+
+  /* CENTER VERTICAL LINE */
+  .center-line {
+    @apply hidden md:block absolute top-40 bottom-32 left-1/2 w-px bg-white/10;
+  }
+
+  /* HEADER */
+  .team-header {
+    @apply text-center mb-28;
+  }
+
+  .team-header h1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  .team-header span {
+    @apply text-cyan-400;
+  }
+
+  .team-header p {
+    @apply mt-4 text-sm text-gray-400 max-w-xl mx-auto;
+  }
+
+  /* SECTION */
+  .team-section {
+    @apply relative mb-28;
+  }
+
+  .section-line {
+    @apply absolute left-1/2 -top-6 w-40 h-px bg-white/20 -translate-x-1/2;
+  }
+
+  .team-section h2 {
+    @apply text-center text-xs uppercase tracking-widest text-cyan-400 mb-12;
+  }
+
+  /* GRID */
+  .team-grid {
+    @apply flex flex-wrap justify-center gap-12;
+  }
+
+  /* CARD */
+  .team-card {
+    @apply w-[180px] text-center p-6 rounded-2xl
+           bg-white/5 backdrop-blur-xl
+           border border-white/10
+           transition-all duration-300
+           hover:-translate-y-3
+           hover:shadow-[0_0_40px_rgba(34,211,238,0.35)];
+  }
+
+  /* IMAGE */
+  .team-img {
+    @apply w-24 h-24 mx-auto mb-4 rounded-xl object-cover;
+  }
+
+  /* AVATAR */
+  .team-avatar {
+    @apply w-24 h-24 mx-auto mb-4 rounded-xl
+           flex items-center justify-center
+           text-xl font-bold text-cyan-300
+           bg-gradient-to-br from-cyan-400/20 to-blue-500/20;
+  }
+
+  /* TEXT */
+  .team-card h3 {
+    @apply text-sm font-semibold;
+  }
+
+  .role {
+    @apply text-xs text-gray-400;
+  }
+
+  /* SOCIALS */
+  .socials {
+    @apply flex justify-center gap-4 mt-4 opacity-70;
+  }
+
+  .socials a {
+    @apply hover:text-cyan-400 transition;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
